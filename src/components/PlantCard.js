@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 
 function PlantCard({ id, name, image, price, deletePlant, updatePlant }) {
   const [inStock, setInStock] = useState(true);
   const [priceInput, setPriceInput] = useState(price);
 
-  // Handler to mark the plant as out of stock
+// Handler to mark the plant as out of stock
   const markOutOfStock = () => setInStock(false);
 
   // Handler to delete the plant
@@ -22,7 +22,11 @@ function PlantCard({ id, name, image, price, deletePlant, updatePlant }) {
   };
 
   return (
-    <li className="plant-card">
+    <li >
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+        <div className="plant-card">
       <img className="plant-image" src={image} alt={name} />
       <div className="plant-info">
         <h4 className="plant-name">{name}</h4>
@@ -52,6 +56,10 @@ function PlantCard({ id, name, image, price, deletePlant, updatePlant }) {
         </div>
         <button onClick={handleDeleteClick} className="delete-btn">x</button>
       </div>
+      </div>
+        </div>
+      </div>
+    </div>
     </li>
   );
 }

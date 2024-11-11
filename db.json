@@ -31,16 +31,16 @@
       "price": 10.37
     },
     {
-      "id": 6,
-      "name": "Monstera Deliciosa",
-      "image": "./images/monstera.jpg",
-      "price": 25.99
-    },
-    {
       "id": 7,
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "canabis",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Cannabis_sativa_Koehler_drawing.jpg/220px-Cannabis_sativa_Koehler_drawing.jpg",
+      "price": 76,
+      "id": 8
     }
   ]
 }
