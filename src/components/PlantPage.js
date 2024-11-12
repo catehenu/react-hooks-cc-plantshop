@@ -92,4 +92,3 @@ function PlantPage() {
 }
 
 export default PlantPage;
-console.log
