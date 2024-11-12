@@ -12,7 +12,7 @@ function PlantPage() {
   useEffect(() => {
     const getPlants = async () => {
       try {
-        const response = await fetch("https://react-hooks-cc-plantshop-vtoo.onrender.com/plants");
+        const response = await fetch("https://react-hooks-cc-plantshop-v7ib.onrender.com/plants");
         const data = await response.json();
         setPlants(data);
       } catch (error) {
@@ -33,7 +33,7 @@ function PlantPage() {
       body: JSON.stringify(newPlant),
     };
 
-    fetch("https://react-hooks-cc-plantshop-vtoo.onrender.com/plants", configObject)
+    fetch("https://react-hooks-cc-plantshop-v7ib.onrender.com/plants", configObject)
       .then((response) => response.json())
       .then((data) => setPlants((prevPlants) => [...prevPlants, data]));
   };
@@ -41,7 +41,7 @@ function PlantPage() {
   // Handle deleting a plant
   const deletePlant = (plantId) => {
     alert(`You're deleting plant ${plantId}`);
-    fetch(`https://react-hooks-cc-plantshop-vtoo.onrender.com/plants/${plantId}`, { method: "DELETE" })
+    fetch(`https://react-hooks-cc-plantshop-v7ib.onrender.com/plants/${plantId}`, { method: "DELETE" })
       .then(() => {
         setPlants((prevPlants) => prevPlants.filter((plant) => plant.id !== plantId));
       })
@@ -60,7 +60,7 @@ function PlantPage() {
       body: JSON.stringify(updatedPriceObject),
     };
 
-    fetch(`https://react-hooks-cc-plantshop-vtoo.onrender.com/plants/${plantId}`, configObject)
+    fetch(`https://react-hooks-cc-plantshop-v7ib.onrender.com/plants/${plantId}`, configObject)
       .then((response) => response.json())
       .then((updatedPlant) => {
         setPlants((prevPlants) =>
